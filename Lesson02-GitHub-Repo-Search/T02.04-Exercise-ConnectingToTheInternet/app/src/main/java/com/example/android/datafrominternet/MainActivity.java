@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         URL githubSearchUrl = NetworkUtils.buildUrl(githubQuery);
         mUrlDisplayTextView.setText(githubSearchUrl.toString());
         try {
-            NetworkUtils.getResponseFromHttpUrl(githubSearchUrl);
+            mUrlDisplayTextView.setText(NetworkUtils.getResponseFromHttpUrl(githubSearchUrl));
         } catch (IOException ioe) {
             ioe.printStackTrace();
         }
